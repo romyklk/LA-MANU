@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Selecteurs</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <h1>
+        Les Selecteurs
+    </h1>
+
+    <h2>
+        I - Les sélecteurs de base
+    </h2>
+
+    <h3>
+        1. Les selecteurs de type(ou de balise)
+    </h3>
+
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deserunt consequuntur repudiandae minus facilis repellendus numquam, dolor aliquid sit quis dolores quae nobis quidem, veritatis omnis id distinctio eaque architecto!
+    </p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit praesentium alias aliquam molestias dolorem, sunt eaque ullam distinctio quos quam, saepe at dolorum suscipit reprehenderit quas, ea officia? Quis, ducimus.
+    </p>
+<hr>
+    <h3 class="intro-title">
+        2. Les sélecteurs de classe
+    </h3>
+
+    <p class="intro-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deserunt consequuntur repudiandae minus facilis repellendus numquam, dolor aliquid sit quis dolores quae nobis quidem, veritatis omnis id distinctio eaque architecto!
+    </p>
+    <p class="intro-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit praesentium alias aliquam molestias dolorem, sunt eaque ullam distinctio quos quam, saepe at dolorum suscipit reprehenderit quas, ea officia? Quis, ducimus.
+    </p>
+<hr>
+    <h3>
+        3. Selecteur d'ID
+    </h3>
+
+    <div id="container">
+        <p id="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit praesentium alias aliquam molestias dolorem, sunt eaque ullam distinctio quos quam, saepe at dolorum suscipit reprehenderit quas, ea officia? Quis, ducimus.
+        </p>
+    </div>
+<hr>
+    <h2>
+        II - Les selecteurs combinés
+    </h2>
+
+    <h3>
+        1. Les selecteurs descendants(espace)
+    </h3>
+    <div class="produit">
+        <h3>Liste des produits</h3>
+        <ul>
+            <li>Chaise de jardin</li>
+            <li>Table de cuisine</li>
+            <li>Lit pour enfants</li>
+            <li>Table de travail</li>
+            <div>
+                <h3>Prix total : 100€</h3>
+            </div>
+        </ul>
+    </div>
+<hr>
+
+<h3>
+    2. Selecteur d'enfant direct(>)
+</h3>
+
+<section>
+    <h4>Titre de la section</h4>
+    <span>Premier span de la section</span>
+    <p>Premier paragraphe de la section</p>
+    <span>Deuxième span de la section</span>
+    <div>
+        <h5>Titre de la sous section</h5>
+        <span>Premier span de la sous section</span>
+    </div>
+    <span>Troisieme span de la section</span>
+</section>
+<hr>
+
+<h3>
+    3. Selecteur de combinaison de classe
+</h3>
+<p class="header main-title">
+    titre principal
+</p>
+<p class="header">
+    Un autre titre
+</p>
+<hr>
+
+<h3>
+    4. Le selecteur universel(*)
+</h3>
+<div id="wrapper">
+    <ol class="list">
+        <li class="list-item">html</li>
+        <li class="list-item">css</li>
+        <li class="list-item">JavaScript</li>
+    </ol>
+</div>
+
+<hr>
+
+<h3>
+    5. Le selecteur de frère adjacent(+)
+</h3>
+    <div class="detail">
+        <h3>Titre principal</h3>
+        <p>Premier paragraphe</p>
+        <p>Deuxième paragraphe qui ne sera pas affecté par le sélecteur de frère adjacent</p>
+    </div>
+
+<hr>
+<h3>
+    6. Groupement de selecteurs
+</h3>
+
+<hr>
+<h3>
+    7. Sélecteurs d'attributs
+</h3>
+
+<input type="text" placeholder="Entrez votre nom">
+<input type="email" placeholder="Entrez votre email">
+</body>
+</html>

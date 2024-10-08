@@ -1,0 +1,88 @@
+/* 
+
+Par défaut quand nous donnons une largeur ou une hauteur à une boîte, elle prend en compte le padding et le border.Ce qui fait que dans .box-1 j'ai 260X160 . Pour éviter cela, je peux utiliser la propriété box-sizing.
+Elle prend 2 valeurs possibles : content-box et border-box
+
+border-box: la largeur et la hauteur incluent le padding et le border.
+content-box: la largeur et la hauteur ne comprennent pas le padding et le border.
+
+//!\\NB : Il faut toujours mettre box-sizing: border-box dans le reset de la feuille CSS.
+*/
+
+.box-1{
+    width: 200px;
+    height: 100px;
+    background-color: lightcoral;
+    margin: 30px;
+    padding: 20px;
+    border: 10px solid black;
+}
+
+.box-2 {
+    width: 200px;
+    height: 100px;
+    background-color: lightcoral;
+    margin: 30px;
+    padding: 20px;
+    border: 10px solid black;
+    box-sizing: border-box;
+}
+
+/* 
+
+DISPLAY 
+
+La propriété display permet de contrôler la façon dont les éléments s'affichent sur la page.
+
+Il est composé de 3 valeurs possibles : block, inline, inline-block et none.
+
+block : chaque élément s'affiche sur une nouvelle ligne.
+inline: l'élément ne prend que la largeur de son contenu et plusieurs éléments peuvent être placés sur la même ligne.
+inline-block : combinaison de block et inline.
+none : l'élément n'est pas affiché.
+*/
+
+.block-element{
+    background-color: tomato;
+   /*  margin: 20px;
+    padding: 20px; */
+    
+}
+
+/* 
+margin-top et margin-bottom sur un élément de type inline ne fonctionne pas.
+padding-top et padding-bottom fonctionnent mais ne pousse pas les autres éléments qui sont autour.
+*/
+
+.inline-element{
+    background-color: teal;
+    display: inline;
+
+}
+
+/* On peut changer le comportement d'un élément de type inline en block en utilisant la propriété display. */
+.title{
+    background-color: orange;
+    display: block;
+}
+
+
+/* inline-block : combinaison de block et inline */
+
+button{
+    display:inline-block;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* none */
+
+h4{
+    display: none;
+}
