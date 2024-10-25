@@ -1,0 +1,94 @@
+/* Héritage en CSS
+
+Héritage en CSS permet de transmettre des propriétes d'un parent à un enfant.
+*/
+
+
+/* Tous les éléments de la page héritent des propriétés du body. */
+body {
+    background-color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: sandybrown;
+}
+
+.main {
+    color: white;
+    background-color: darkslategrey;
+    padding: 2rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.main p {
+    padding: inherit;
+}
+
+/* Cascade en CSS 
+Cascade: définit l'ordre d'application des règles CSS.
+
+Le inline style est prioritaire sur le style qui est défini dans le head qui à son tour est prioritaire sur le style défini dans la feuille de style.
+*/
+
+a {
+    display: block;
+    color: tomato;
+    font-size: 20px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+h2 {
+    color: initial;
+}
+
+/* Force des sélecteurs 
+
+niveau 1 : selection avec la balise HTML
+
+niveau 2 : selection avec la classe(même si la selection de la classe vient avant ou après la selection de la balise HTML , la classe est prioritaire)
+
+niveau 3 : selection avec l'ID (même si la selection de l'ID vient avant ou après la selection de la classe, l'ID est prioritaire)
+
+niveau 4 : selection avec la combinaison de classe et ID(même si la selection de la classe vient avant ou après la selection de l'ID, la classe est prioritaire)
+
+niveau 5 : selection et ajout du mot « !important » (même si la selection vient avant ou après la sélection avec la combinaison de classe et ID, le mot « ! important » est prioritaire)
+
+5>4>3>2>1
+*/
+
+
+
+blockquote {
+    color: white;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.citation {
+    color: black;
+    background-color: magenta;
+}
+
+#citation {
+    color: lightskyblue;
+    background-color: lightseagreen;
+}
+
+.citation#citation {
+    color: lightsalmon;
+    background-color: lightsteelblue;
+}
+
+blockquote {
+    color: thistle !important;
+    background-color: #f10202 !important;
+}

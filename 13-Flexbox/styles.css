@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: orangered;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #1657;
+}
+
+.card {
+    background-color: #c8C80080;
+    color: #333;
+    width: 100px;
+    min-height: 100px;
+    margin: 10px;
+}
+
+.memo {
+    width: 300px;
+    background-color: lightgoldenrodyellow;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+section {
+    display: flex;
+}
+
+section>div {
+    width: 70%;
+    background-color: #f0f0f0;
+}
+
+/* 
+Flexbox est un modele de mise en page de contenu qui permet de créer des éléments de mise en page flexibles et responsives.
+
+Le conatiner parent doit avoir la propriété display : flex afin de pouvoir utiliser les autres propriétés de flexbox.
+*/
+.container-1 {
+    display: flex;
+}
+
+/* 
+Flex Direction : Permet de définir la direction de l'alignement des éléments.Elle peut prendre les valeurs suivantes : row, row-reverse, column, column-reverse.
+
+row(valeur par défaut) : Aligne les éléments de la ligne de gauche à droite.
+row-reverse : Aligne les éléments de la ligne de droite à gauche.
+column : Aligne les éléments de la colonne de haut en bas.
+column-reverse : Aligne les éléments de la colonne de bas en haut.
+*/
+
+.container-2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Justify-content : Permet de controller l'alignement sur l'axe principale
+
+flex-start(valeur par défaut) : alignement au début
+flex-end : alignement à la fin
+center : alignement au centre
+space-between : distribue les éléments avec un espace égal entre chaque élément
+space-around : distribue les éléments avec un espace autour de chaque élément
+space-evenly : distribue les éléments avec un espace égal sur la ligne
+
+*/
+
+.container-3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Align-items : Permet de controller l'alignement sur l'axe perpendiculaire
+
+center : alignement au centre
+flex-start : alignement au début
+flex-end : alignement à la fin
+baseline : alignement au bas
+stretch : alignement à l'étendue
+*/
+
+.container-4 {
+    display: flex;
+    height: 300px;
+    align-items: center;
+}
+
+/* Flex-wrap : Permet de controller le wrapping(retour à la ligne) des éléments
+nowrap : retour à la ligne non-wrappé
+wrap : retour à la ligne wrappé
+wrap-reverse : retour à la ligne wrappé dans l'ordre inverse
+*/
+.container-5 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Flex-shrink : Permet de controller le rétrécissement des éléments si la taille du conteneur est inférieure à la taille des éléments.
+0(valeur par défaut) : étendue des éléments
+1 : réduction de la taille des éléments
+*/
+
+.container-6{
+    display: flex;
+    gap: 30px;
+}
+
+.container-6 .card{
+    flex-shrink: 1;
+}
+
+/* Align-content : Permet de controller l'alignement sur l'axe principale */
+
+
+.container-7 .card {
+    height: 100px;
+}
+.container-7 {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+/* Align-self: Permet de controller l'alignement sur l'axe perpendiculaire sur un élément spécifique */
+
+.container-8 .card{
+    height: 100px;
+}
+
+.container-8 {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.container-8 .card:nth-child(2){
+    background-color: coral;
+    align-self: center;
+}
+
+.container-8 .card:nth-child(4) {
+    background-color: gold;
+    align-self: flex-end;
+}
+
+
+/* Flex-grow: Permet de controller la capacité d'un élément à s'étendre sur la ligne si la taille du conteneur est supérieure à la taille des éléments */
+
+.container-9{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .container-9 .card{
+    flex-grow: 1;
+} */
+ .container-9 .card:nth-child(2){
+    background-color: coral;
+    flex-grow: 2;
+}
+
+/* Flex-basis: Permet de controller la taille d'un élément dans la ligne. Elle peut prendre les valeurs suivantes : auto | taille */
+
+.container-10{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-10 .card:nth-child(2){
+    flex-basis: 300px;
+}

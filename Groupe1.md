@@ -40,13 +40,6 @@ L’objectif de ce projet est de développer un site web statique en utilisant l
 
 
 
-
-
-- 
-
-
-
-
 # SITES D'ENTRAINEMENT
 
 - https://cssbattle.dev/

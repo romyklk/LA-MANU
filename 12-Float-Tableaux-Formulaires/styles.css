@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+
+Float: Permet de faire flotter un élément à droite ou à gauche.
+
+left: Permet de faire flotter à gauche.
+right: Permet de faire flotter à droite.
+
+clear: Permet de supprimer le flotteur.Cela va permettre de s'assurer que les éléments ne se chevauchent pas.
+*/
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: lightcoral;
+    padding: 50px;
+}
+
+.main-image {
+    float: right;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* exemple */
+
+section {
+    margin: 30px 0;
+}
+
+.sidebar-left {
+    float: left;
+    border: 2px solid black;
+    width: 23%;
+    padding: 1%;
+}
+
+.content {
+    border: 2px solid rebeccapurple;
+    width: 50%;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+.sidebar-right {
+    float: right;
+    border: 2px solid black;
+    width: 23%;
+    padding: 1%;
+}
+
+.footer {
+    clear: both;
+    border: 2px solid green;
+    width: 100%;
+    padding: 10px;
+}
+
+
+/* FORMULAIRE */
+
+.simple-form {
+    width: 600px;
+    margin: 20px auto;
+    border: 2px solid #CCC;
+    background-color: #b5b2B2;
+}
+
+.simple-form label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.simple-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline-color: seagreen;
+}
+
+.simple-form button {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #265e37;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.simple-form button:hover{
+    background-color: #6ed28e;
+}
+
+/* TABLEAU */
+
+table{
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+thead{
+    background-color: #41a241;
+    color: white;
+}
+
+tfoot{
+    font-weight: bold;
+}
+
+caption{
+    caption-side: bottom;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+tr:hover{
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even){
+    background-color: #f7d4d4;
+}
+
+thead:hover{
+    color: black;
+}
