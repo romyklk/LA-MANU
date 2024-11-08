@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <h1>Les bases de JavaScript</h1>
+
+
+    <!-- On peut écrire du javaScript direcetement dans les balises html , en utilisant les attribut spécifiques tels que: onclick, onkeyup, etc. 
+    /!\ Attention: Cette méthode n'est pas recommandé car on aura des problèmes de performances ,sécurité , maintenabilité etc....
+    -->
+    <h2 onclick="alert('Du js depuis la balise h2')">
+        Où écrire son code JavaScript
+    </h2>
+
+    <!-- 
+    On peut écrire du javscript dans une balise script à l'intérieur de notre fichier html
+
+    /!\ Attention: Cette méthode n'est pas recommandé on aura des difficultés à réutiliser du code et un problème de séparation de responsabilités
+    -->
+    <script>
+        console.log("Du js dans une balise script");
+    </script>
+
+    <!--
+        Ecrirre du javascript dans un fichier .js externe que nous allons lier à notre html
+        /!\ Méthode recommandée car on peut réutiliser le code et on a une séparation de responsabilités puis facilité la maintenance
+
+        Il faut mettre le lien vers le fichier dans dans l'attribut src de la balise script
+
+        Vous pouvez placer votre balise script dans le head mais attention il faut ajouter l'attribut defer <script src="./assets/js/script.js" defer></script>
+
+        Ou mettre votre balise script avant la fermeture de la balise body
+    -->
+
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+
+    <style>
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: #f9f9de;
+            padding: 20px;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+            margin: 0 0 10px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Les formulaires</h1>
+    <!-- 
+        Pour créer un formulaire on utilise la balise form
+
+        A l'intérieur de la balise form on peut mettre des éléments de formulaire(input,textarea,button,etc..)
+
+        Les attributs de la balise form sont :
+            action : indique l'adresse où on souhaite que le formulaire soit envoyé
+            method : indique le méthode utilisée pour envoyer le formulaire(GET ou POST)
+            Ceci n'est pas obligatoire pour le moment car on ne fera pas de traitement de formulaire.
+        
+        Les attributs des éléments de formulaire sont :
+            type : indique le type du champ du formulaire(text,email,password,etc..)
+            name : indique le nom du champ du formulaire(utilié en php pour manipuler le champ)
+            id : indique l'id du champ du formulaire(utilisé pour les événements javascript ou pour les styles)
+            placeholder : indique un texte d'exemple pour le champ du formulaire
+
+            Pour les éléments de formulaire qui sont des boutons on peut mettre le type de bouton(button,submit,reset,etc..)
+            submit: indique que c'est un bouton de soumission du formulaire
+            reset: indique que c'est un bouton de réinitialisation du formulaire
+            button: indique que c'est un bouton de type simple
+
+            L'attribut disabled permet de désactiver un bouton
+    -->
+
+    <h2>Les formulaires simples</h2>
+
+    <form action="" method="">
+
+        <label for="username">Nom</label>
+        <input type="text" name="username" id="username" placeholder="Entrez votre nom">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Entrez votre email">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Entrez votre message"></textarea>
+
+        <button>
+            Envoyer
+        </button>
+
+        <button type="submit">
+            Valider
+        </button>
+
+        <button type="reset">
+            Effacer
+        </button>
+
+        <button type="button">
+            un autre bouton
+        </button>
+
+        <button type="button" disabled>
+            un bouton désactivé
+        </button>
+    </form>
+
+    <h2>
+        Différents types de champs de formulaire
+    </h2>
+
+    <form action="">
+        <label for="age">Quel est votre âge?</label>
+        <input type="number" name="age" id="age" placeholder="Entrez votre âge">
+
+        <label for="color">Quelle est votre couleur préférée?</label>
+        <input type="color" name="color" id="color" placeholder="Entrez votre couleur préférée">
+        <!--
+
+            date : Pour selctionner une date
+            datetime-local : Pour selctionner une date avec heure
+            range : Pour sélectionner une valeur entre 2 valeurs
+            checkbox : Pour sélectionner une valeur ou plusieurs valeurs(case à cocher)
+            radio : Pour sélectionner une valeur(radio)
+            file : Pour sélectionner un fichier
+            password: pour le mot de passe(cacher le texte)
+            select : pour sélectionner parmi une liste de choix
+        -->
+        <label for="range">Quel est votre score sur un examen?</label>
+        <input type="range" name="range" id="range" placeholder="Entrez votre score sur un examen">
+
+        <label for="date">Quand êtes vous né?</label>
+        <input type="date" name="date" id="date">
+
+        <label for="">Quand êtes vous disponible?</label>
+        <input type="datetime-local" name="datetime-local" id="datetime-local">
+
+        <label for="password">Quel est votre mot de passe?</label>
+        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
+
+        <label for="" style="display: block;">Quels sont vos préférences?</label>
+
+        <input type="checkbox" name="html" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="css" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="javascript" id="javascript">
+        <label for="javascript">Javascript</label>
+
+        <label for="" style="display: block;">Quel est votre civilité?</label>
+        <input type="radio" name="civilite" id="homme">
+        <label for="homme">Homme</label>
+
+        <input type="radio" name="civilite" id="femme" checked>
+        <label for="femme">Femme</label>
+
+        <label for="">Ajouter votre cv</label>
+        <input type="file" name="cv" id="cv" accept="image/*">
+
+        <label for="pays">Pays</label>
+        <select name="" id="pays">
+            <option>Quel est votre pays</option>
+            <option value="france">France</option>
+            <option value="espagne">Espagne</option>
+            <option value="italie">Italie</option>
+            <option value="allemagne">Allemagne</option>
+        </select>
+    </form>
+
+    <h2>
+        Groupes de champ et les attributs de validation html
+    </h2>
+
+    <!--
+        Les attributs de validation permettent de valider les champs de formulaire
+        minlength : indique le nombre minimum de caractères que le champ doit contenir
+        maxlength : indique le nombre maximum de caractères que le champ doit contenir
+        required : indique que le champ est obligatoire
+        autocomplete : indique que le champ est automatiquement complété par le navigateur
+
+        fieldset: utiliser pour regrouper logiquement pluisieurs champs de formulaire
+        legend: permet de décrire le groupe de champs
+    -->
+
+    <form action="">
+        <fieldset>
+            <legend>Information de contact</legend>
+            <input type="text" placeholder="Entrez votre nom" minlength="2" maxlength="10" required>
+            <input type="email" placeholder="Entrez votre email" autocomplete="off">
+            <input type="tel" placeholder="Entrez votre numéro de téléphone">
+        </fieldset>
+
+        <fieldset>
+            <legend>Information personnelle</legend>
+            <input type="text" placeholder="Saisissez votre prénom">
+            <input type="text" placeholder="Saisissez votre adresse">
+        </fieldset>
+
+        <button type="submit">
+            Valider
+        </button>
+    </form>
+</body>
+
+</html>

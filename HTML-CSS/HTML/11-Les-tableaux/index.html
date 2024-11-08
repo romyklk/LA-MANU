@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+</head>
+<body>
+    <h1>Les tableaux</h1>
+    <p>
+        Les tableaux permettent de structurer des données dans un format lisible et compréhensible par l'utilisateur.
+    </p>
+
+    <h2>Les tableaux simples</h2>
+
+    <!--
+        Un tableau est constitué de ligne et de colonne
+        Dans la première ligne on définit les titres des colonnes
+        Dans les lignes suivantes on définit les données
+
+        table : permet de créer un tableau
+        tr (table row) : permet de créer une ligne
+        th (table header) : permet de créer un titre de colonne
+        td (table data) : permet de créer des données à l'intérieur d'une ligne
+
+    -->
+
+    <table border="1">
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Mike</td>
+            <td>Smith</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <h2>
+        Les tableaux complexes(caption,thead,tbody,tfoot)
+    </h2>
+
+    <table border="1">
+        <caption>Carnet d'adresses</caption>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Telephone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>123456789</td>
+            </tr>
+            <tr>
+                <td>Mike</td>
+                <td>Smith</td>
+                <td>987654321</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>356565900</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total des contacts: 3</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

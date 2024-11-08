@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout de CSS & JS </title>
+<link rel="stylesheet" href="style.css">
+    <style>
+        h1{
+            color:crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>AJOUT DE CSS & JS</h1>
+
+    <h2>Ajout de CSS</h2>
+
+    <p>
+        Nous avons 3 possibilités d'ajouter du css dans notre code:dans le head, dans la balise en utilisant l'attribut style et dans une feuille de style séparée(ce qui est recommandé)
+    </p>
+
+    <h3>Dans le head</h3>
+    <p>
+        Pour ajouter du style à notre code dans le head, il faut ajouter une balise `style` et à l'intérieur écrire notre css
+    </p>
+
+    <h3>Dans la balise en utilisant l'attribut style</h3>
+
+    <section style="background-color: chocolate;   color:#dedede;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, odit numquam? Earum unde quo tempora, esse, temporibus possimus ipsum assumenda quisquam veritatis odio consequuntur placeat nulla aliquam quod, inventore voluptatum.
+    </section>
+
+    <h2>Ajout de JavaScript</h2>
+
+    <p>
+        Nous avons 2 possibilités pour ajouter du JS dans notre code
+    </p>
+
+    <h3>Dans une balise script</h3>
+    <p>
+        Nous pouvons écrire notre code javascript dans une balise script à la fin de notre document , juste avant la fermeture du body
+    </p>
+
+    <h3>Dans un fichier séparé.js</h3>
+    <p>
+        Nous pouvons et il est récommandé d'écrire notre script dans un fichier séparé. Afin de lier ce fichier à notre document, nous allons utiliser la balise script avec l'attribut src qui va préciser le chemin vers le fichier js. Cette balise est placée en bas du document avant la fermeture du body
+    </p>
+
+    <script>
+        console.log("Je suis la JS dans le fichier HTML")
+    </script>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
