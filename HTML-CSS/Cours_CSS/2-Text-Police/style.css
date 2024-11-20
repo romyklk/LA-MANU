@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+body {
+    width: 70%;
+    margin: 0 auto;
+    /* Pour centrer le contenu */
+    background-color: #ddeff0;
+}
+
+/* 
+text-align : Permet de controller l'alignement du texte.Cette propriété peut prendre les valeurs suivantes : left, right, center, justify.
+
+color : Permet de définir la couleur du texte.
+
+font-size : Permet de définir la taille du texte.Sa valeur peut être exprimée en pixels, en pourcentage ou en unités relatives(em,rem)
+
+letter-spacing : Permet de définir l'espacement entre les lettres d'un mot. Sa valeur peut être exprimée en pixels, en pourcentage ou en unités relatives(em,rem)
+
+font-weight : Permet de définir le poids du texte(normal,bold,bolder,lighter).Cette propriété peut prendre aussi des valeurs numériques entre 100 et 900 en fonction la police utilisée.
+
+font-family : Permet de définir la police de caractères à utiliser.
+
+text-wrap : Permet de controller la façon dont le texte est aligné à l'intérieur de l'élément.Cette propriété peut prendre les valeurs suivantes : balance, nowrap, pretty , stable.
+
+*/
+h1 {
+    text-align: center;
+    color: brown;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    text-wrap: balance;
+}
+
+/* 
+font-style : Permet de définir le style du texte(normal, italic, oblique).
+*/
+h1 span {
+    font-style: italic;
+}
+
+/* 
+text-transform : Permet de changer la format du texte(uppercase, lowercase,capitalize, etc.)
+*/
+
+h2 {
+    color: blue;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: serif;
+}
+
+h6 {
+    text-align: right;
+}
+
+h6 span {
+    color: red;
+}
+
+/* 
+line-height : Permet de définir l'espace entre les lignes d'un paragraphe.
+*/
+p {
+    line-height: 1.5;
+}
+
+strong {
+    color: #192a56;
+}
+
+/* 
+list-style-type : Permet de définir le type de liste à utiliser. Cette propriété peut prendre les valeurs suivantes : disc, circle, square, decimal etc...
+*/
+
+ul {
+    list-style-type: upper-alpha;
+}
+
+ul li,
+ol li {
+    margin: 10px 0;
+}
+
+/* 
+list-style-image : Permet de définir l'image à utiliser pour la liste.On lui précise le chemin d'accès de l'image.
+*/
+
+ol {
+    list-style-image: url("./arrowright.svg");
+}
+
+/* LES LIENS
+
+text-decoration : Permet de définir le style du trait d'un lien.Elle peut prendre les valeurs suivantes : none, underline, line-through, etc...
+
+text-decoration-thickness : Permet de définir l'épaisseur du trait du lien.
+
+cursor : Permet de définir le style du curseur lorsque l'utilisateur survole un lien.(pointer,crosshair,etc...)
+
+text-underline-offset : Permet de définir l'espacement entre le trait et le texte du lien.
+*/
+
+a {
+    color: green;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    cursor: pointer;
+    text-underline-offset: 3px;
+}
+
+/* AJOUT DE POLICE PERSONNALISEE 
+
+Nous avons 2 façons de personnaliser notre police : 
+1. En utilisant google fonts ou d'autres services de police en ligne.
+2. En utilisant une police locale(dans notre dossier).
+
+
+1. Utilisation de google fonts
+
+Pour utiliser une police de google fonts, il faut ajouter la balise <link> dans le <head> après le css de notre page ou le @import dans notre feuille css tout en haut du fichier.
+
+
+2. Utilisation d'une police locale
+
+Pour utiliser une police en local, il faut au préalable ajouter la police dans le dossier fonts de notre projet. Ensuite, il faut ajouter la balise @font-face qui permet de définir la police à utiliser en local.
+
+cette propriété prend: le nom de la police et son emplacement(url). Il est possible d'ajouter plusieurs emplacements ou plusieurs format pour une police.Enfin on peut utiliser le nom de la police sur nos éléments.
+
+*/
+
+h3 {
+    color: tomato;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: "Protest Guerrilla", sans-serif; */
+}
+
+@font-face {
+    font-family: "Extra Day";
+    src: url("./fonts/Extra\ Days.otf");
+    src: url("./fonts/Extra\ Days.ttf");
+}
+
+.my-font {
+    font-family: "Extra Day", sans-serif;
+    font-size: 40px;
+}

@@ -1,0 +1,87 @@
+/* 
+Unité de mesure
+
+pixel(px) : Permet de définir la taille d'un élément en pixels.Sa valeur est fixe quelque soit la résolution d'écran.
+
+em : Permet de définir la taille d'un élément en unité de mesure relative à la taille du parent.
+
+Par défaut, les textes ont une taille de 16px.
+
+1em = 16px
+2em = 32px
+
+rem(root em) : Permet de définir la taille d'un élément en unité de mesure relative à la taille de l'élément HTML.
+
+1rem = 16px
+
+Il est recommandé d'utiliser rem pour les textes car il est plus adapté à la résolution d'écran.
+*/
+
+.texte {
+    /* font-size: 40px; */
+    /* font-size: 2em; */
+    font-size: 1.5rem;
+}
+
+/* 
+Width(largeur) permet de définir la largeur d'un élément.Sa valeur peut être exprimée en pixels, en pourcentage ou en unités relatives(em,rem).La valeur par défaut est auto.
+*/
+/* 
+.box-1{
+    background-color: lightcoral;
+    height: 100px;
+    width: 500px; Cette largeur est exprimée en pixels, fixe quelque soit la résolution d'écran 
+}
+*/
+
+
+/* 
+vw(viewport width) : Permet de définir la largeur d'un élément en fonction de la largeur de la fenêtre d'affichage.
+*/
+.box-2 {
+    background-color: orange;
+    height: 100px;
+    width: 50%;
+    /* Cette largeur est exprimée en pourcentage, elle est relative à la largeur du parent.Cette valeur sera toujours égale à 50% de la largeur du parent */
+}
+
+/* HEIGHT(hauteur) permet de définir la hauteur d'un élément.Sa valeur peut être exprimée en pixels, en pourcentage ou en unités relatives(em,rem).
+*/
+
+
+.box-3 {
+    background-color: hotpink;
+    height: 100px;
+    width: 400px;
+}
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+/* Cette hauteur est exprimée en pourcentage, elle est relative à la hauteur du parent.Cette valeur sera toujours égale à 50% de la hauteur du parent. Pour cela il faut préciser la hauteur du parent qui le viewport en selection les éléments HTML et body puis on affecte la valeur 100% de la taille d'écran.
+
+*/
+.box-4 {
+    background-color: lightcoral;
+    height: 50vh;
+    /* viewport height qui est exprimée en pourcentage */
+}
+
+/* 
+min-width(largeur minimum) permet de définir la largeur minimale d'un élément.C'est-à-dire que si la largeur d'un élément est inférieure à la valeur spécifiée, il sera automatiquement redimensionné pour qu'elle soit égale à la valeur spécifiée.
+
+max-width(largeur maximale): Permet de définir la largeur maximal d'un élément.C'est-à-dire que si la largeur d'un élément est supérieure à la valeur spécifiée, il sera automatiquement redimensionné pour qu'elle soit égale à la valeur spécifiée.
+
+Exemple:
+
+selecteur{
+    min-width: 100px; On ne peut pas avoir une largeur inférieure à 100px
+    max-width: 200px; On ne peut pas avoir une largeur supérieure à 200px
+}
+
+c'est le même principe pour les hauteurs.(min-height, max-height)
+*/

@@ -1,0 +1,32 @@
+/* Les variables */
+:root{
+    --main-bg: #F0F0F0;
+    --bg-dark: #000;
+    --bg-light-dark: #313131;
+    --text-white: #FFF;
+    --bg-red: #FF6161;
+    --bg-light-red: #FFA0A0;
+    --text-gray: #999;
+}
+
+/* RESET CSS */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth; /* Permet de créer un défilement fluide */
+    font-size: 62.5%; /* Permet de régler la taille de la police à 10px */
+}
+
+body{
+    background-color: var(--main-bg);
+    color: var(--bg-dark);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-wrap: balance;
+    font-family: "Montserrat", sans-serif;
+}

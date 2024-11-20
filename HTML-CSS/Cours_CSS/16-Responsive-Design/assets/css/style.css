@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    background-color: #f4CECE;
+}
+
+header{
+    background-color: #31802e;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 900;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: bisque;
+    padding: 40px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+
+section{
+    width: 80%;
+    margin: 0 auto;
+}
+
+section img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+section video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* RESPONSIVE DESIGN 
+
+Le responsive design est un processus qui consiste à créer des sites web qui s'adaptent à toutes les tailles d'écran.
+
+Aujourd'hui, les sites web sont généralement conçus pour s'adapter à des écrans de taille spécifique. 
+
+Pour faire un site responsive,on va utiliser des media queries qui vont nous permettre de définir des styles différents en fonction de la taille d'écran.
+
+Pour chaque breakpoint(taille d'écran), on va définir un media query qui va permettre de définir des styles différents pour les écrans de taille spécifiée.
+
+@media(max-width:600px){
+    styles pour les écrans de taille inférieure à 600px 
+}
+
+@media(min-width:601px) and (max-width:1024px){
+    styles pour les écrans de taille entre 601px et 1024px
+}
+
+@media(min-width:1025px){
+    styles pour les écrans de taille supérieure à 1024px
+}
+*/
+
+/* Ce media query permet de définir un style spécifique si la taille d'écran est inférieure à 1024px */
+@media(max-width:1024px){
+    header{
+        background-color: purple;
+    }
+
+    h1{
+        text-transform: capitalize;
+    }
+
+    .container{
+        background-color: chocolate;
+        color: #fff;
+    }
+
+    section{
+        display: none;
+    }
+}
+
+/* Cacher le menu sur les écrans dont la taille est inférieure à 768px */
+
+@media(max-width:768px){
+    header{
+        display: none;
+    }
+}
+
+/* SCREEN ET PRINT 
+
+screen : Permet de définir des styles spécifiques pour les écrans.
+print : Permet de définir des styles spécifiques pour les impressions.
+*/
+
+@media screen and (max-width:600px) {
+    /* On cache tout sauf la vidéo */
+    header{
+        display: none;
+    }
+    h1{
+        display: none;
+    }
+    .container{
+        display: none;
+    }
+
+    section{
+        display: block;
+    }
+
+    section h2{
+        display: none;
+    }
+
+    section img{
+        display: none;
+    }
+}
+
+/* Pour les impressions */
+@media print{
+    header{
+        display: none;
+    }
+    h1,h2{
+        display: none;
+    }
+}
+
+/* Pour les écrans de taille supérieure à 769px et inférieure à 992px */
+@media (min-width:769px) and (max-width:992px){
+    body{
+        background-color: darkkhaki;
+    }
+}

@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+on peut utiliser la propriété object-fit pour ajuster l'image selon son contenu.
+
+object-fit : permet de définir la façon dont l'image est affichée sur la page.
+
+Elle prend les valeurs suivantes : contain, cover, fill, none, scale-down.
+
+cover: l'image couvre toute la largeur et hauteur de la boîte.
+contain: l'image est placée dans la boîte sans dépasser les bords.
+fill: l'image est centrée dans la boîte.
+scale-down: l'image est redimensionnée pour qu'elle soit dans la boîte.
+none: l'image n'est pas redimensionnée.Elle garde sa taille originale.
+
+
+Object-position permet de contrôler la position d'une image lorqu'elle est redimensionnée.
+
+Elle prend les valeurs suivantes : center, top, bottom, left, right.
+
+*/
+
+img {
+    background-color: aqua;
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* les filtres 
+
+*/
+
+.img-filter {
+    filter: blur(5px);
+    /* filter: blur(5px);  blur permet de définir le rayon de l'effet de flou */
+    /* filter: grayscale(10%); Permet de définir le pourcentage de gris */
+    /* filter: brightness(10%); */
+    /* filter: opacity(50%); */
+}
+
+
+/* background-image 
+background-image: Permet de définir l'image de fond d'un élément.On lui passe l'url de l'image.
+background-size: Permet de définir la taille de l'image de fond.
+background-repeat: Permet de définir le style de répétition de l'image de fond.
+background-position: Permet de définir la position de l'image de fond.
+*/
+h1 {
+    color: #172c05;
+}
+
+.container {
+    height: 100vh;
+    background-image: url("../uploads/repas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    /* VERSION COURTE */
+    /* background: background-image background-position/background-size background-repeat; */
+}

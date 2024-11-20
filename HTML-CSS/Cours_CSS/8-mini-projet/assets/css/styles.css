@@ -1,0 +1,122 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #EDE4E4;
+    color: #333;
+}
+
+/* Les titres */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* Header */
+
+header {
+    background-color: #1ABC9C;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Section presentation */
+
+.presentation {
+    background-image: url('../images/married.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.presentation h2 {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.presentation p {
+    color: #fff;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    max-width: 60rem;
+}
+
+/* Section services */
+#services{
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.service-card{
+    background-color: #fff;
+    margin: 2rem auto;
+    max-width: 50rem;
+    border-radius: 2rem;
+}
+
+.service-card img{
+    width: 100%;
+}
+
+.service-content{
+    padding: 1rem;
+    text-align: left;
+}
+
+.service-content p{
+    color: #7F8C8D;
+}
+
+
+/* Footer */
+
+footer{
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}

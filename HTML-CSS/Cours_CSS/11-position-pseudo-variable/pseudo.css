@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PSEUDO CLASSE 
+
+Un pseudo-classe permet de cibler un élément en fonction de son état ou de son contexte dans la page.
+Sa syntaxe est la suivante :
+
+selction:pseudo-classe{
+}
+
+*/
+
+button{
+    background-color: tomato;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 20px;
+}
+
+/* HOVER: Quand l'élément est survolé */
+
+.btn-hover:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+
+/* ACTIVE: Quand l'élément est cliqué */
+
+.btn-active:active{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+/* CHECKED: quand on coche la case */
+
+input[type="checkbox"]:checked{
+    accent-color: green;
+}
+
+/* FOCUS: quand on clique sur l'élément */
+
+input[type="text"]{
+    border: 4px solid #2f0080;
+    display: block;
+    width: 500px;
+    margin: 20px 0;
+}
+
+input[type="text"]:focus{
+    border:none;
+    outline: 3px solid green;
+}
+
+/* VISITED: quand on clique sur l'élément */
+
+a:visited{
+    color: red;
+}
+
+/* nth-child: Pour sélectionner un élément par rapport à son position dans la liste
+
+even: Pour sélectionner les éléments paires
+odd: Pour sélectionner les éléments impairs
+
+*/
+
+ul li:nth-child(2){
+    color: blue;
+    font-weight: bold;
+}
+
+ul li:nth-child(even){
+    color: green;
+    font-weight: bold;
+}
+
+ul li:nth-child(odd){
+    color: orange;
+    font-weight: bold;
+}
+
+
+/* PSEUDO-ELEMENT
+
+Les peudo-element permettent de cibler et de styliser un élément spécifique ou des parties d'un élément dans une documentation HTML.
+
+Le pseudo-element est utilisé avec le pseudo-classe.
+
+::before : pour ajouter du texte avant un élément
+::after : pour ajouter du texte après un élément
+::first-letter : pour ajouter du texte au début d'un mot
+::first-line : pour ajouter du texte au début d'une ligne
+
+sa syntaxe est la suivante :
+
+selction::pseudo-element{}
+*/
+
+
+h4::before{
+    content: "=>";
+    background-color: brown;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+h4::after{
+    content: "<=";
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+h5::first-letter{
+    font-size: 40px;
+    color: red;
+    font-style: italic;
+}
+
+
+/* POSITION */
+
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
+
+.card-1{
+    background-color: violet;
+}
+
+.card-2{
+    background-color: blue;
+}
+
+.card-3{
+    background-color: green;
+}
+
+.card-4{
+    background-color: yellow;
+}
+
+.card-5{
+    background-color: orange;
+}
+
+/* POSITION STATIC
+static: C'est la position par défaut d'un élément dans le flux du document.Les propriétés top, left , bottom et right n'ont pas d'effet sur cette position.
+*/
+
+.card-1{
+    position: static;
+    top: 50%; /* Aucun effet sur cette position */
+    left: 50%;/* Aucun effet sur cette position */
+}
+
+/* POSITION RELATIVE
+
+Relative: Positionne l'élément dans le flux normal du document par rapport à son parent.
+
+top, left, bottom, right: Permet de définir la position de l'élément par rapport à son parent.
+*/
+
+.card-2{
+    position: relative;
+    top: 50px; /*  */
+    left: 50px;
+    bottom: 100px;
+}
+
+
+/* ABSOLUTE 
+
+Absolute: Positionne l'élément par rapport à son premier parent au sein du flux du document.Si aucun parent n'est trouvé, l'élément est positionné par rapport à l'élément HTML.
+
+top, left, bottom, right: Permet de définir la position de l'élément par rapport à son premier parent.
+
+*/
+
+.card-3{
+    position: absolute;
+    top: 100px;
+    left: 300px;
+}
+
+.main-card{
+    width: 300px;
+    height: 300px;
+    background-color: tomato;
+    position: relative;
+}
+
+.main-content{
+    background-color: violet;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* FIXED 
+fixed: Positionne l'élément par rapport au viewport.L'élément est toujours visible même si le conteneur est déplacé.
+*/
+
+.card-4{
+    position: fixed;
+    top: 10px;
+    left: 50px;
+}
+
+
+/* STICKY
+Sticky: L'élement se comporte comme en position relative jusqu'a ce qu'il atteigne une position spécifique après quoi il se comporte comme en position fixed.
+
+*/
+
+.card-5{
+    position: sticky;
+    top: 10px;
+    left: 500px;
+}
+
+/* Les variables 
+
+:root : Permet de définir une variable globale.
+
+sa syntaxe est la suivante :
+
+:root{
+    --nom-variable:valeur;
+}
+    
+*/
+
+:root{
+    --main-title:tomato;
+    --main-text:#050518;
+    --bg-light:#f0F0F0;
+}
+
+h1{
+    color: var(--main-title);
+}
+
+h2{
+    color: var(--main-text);
+}
+
+
+/* Z-index */
+
+.container{
+    width: 400px;
+    height: 300px;
+    background-color: var(--bg-light);
+    position: relative;
+    margin: 20px;
+}
+
+.container .card{
+    position: absolute;
+}
+
+.first-card{
+    top: 20px;
+    left: 20px;
+    background-color: #604CC3;
+}
+
+.second-card{
+    top: 40px;
+    left: 40px;
+    background-color: #091057;
+}
+
+.third-card{
+    top: 60px;
+    left: 60px;
+    background-color: #024CAA;
+}
+
+.fourth-card{
+    top: 80px;
+    left: 80px;
+    background-color: #EC8305;
+}
+
+.fifth-card{
+    top: 100px;
+    left: 100px;
+    background-color: #C7253E;
+}
+
+
+/* Z-index : Permet de définir l'ordre d'affichage des éléments dans le flux du document.
+
+Par défaut , les éléments s'affichent dans la page comme indiqué dans le flux normal html.
+
+La carte qui à la plus grande valeur z-index est affichée en premier.
+
+La carte qui a un z-index négatif est placé en dessous de tous les éléments et même derrière le container parent.
+
+Si plusieurs éléments ont la même valeur pour le z-index, la priorité se fera dans le html
+*/
+
+.exemple-1 .second-card{
+    z-index: 10;
+}
+
+.exemple-1 .fourth-card{
+    z-index: -2;
+}
+.exemple-1 .third-card{
+    z-index: -1;
+}
+
+
+.exemple-2 .card:hover{
+    z-index: 10;
+}

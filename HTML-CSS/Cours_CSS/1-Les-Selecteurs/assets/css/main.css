@@ -1,0 +1,161 @@
+/*1. Les selecteurs de type(ou de balise) 
+ Ce selecteur cible tous les éléments du type que nous avons spécifiés afin de leurs appliquer une propriété ou une liste de propriétés.
+
+
+*/
+
+body{
+    /*background-color : Permet de définir la couleur de fond*/
+    background-color: lightcyan;
+}
+
+p{
+    /*color : Permet de définir la couleur du texte*/
+    color: blue;
+}
+
+/*
+    2. Les sélecteurs de classe
+
+    Pour cibler un élément avec une classe, on utilise le symbole point (.) suivi du nom de la classe.
+*/
+
+.intro-title{
+    color: seagreen;
+}
+
+.intro-text{
+    color: crimson;
+    /* font-weight : Permet de définir le poids du texte(normal, semi-gras, gras, etc.).Cette propriété peut prendre aussi des valeurs numériques entre 100 et 900 en fonction la police utilisée. */
+    font-weight: bold;
+
+    /* font-size : Permet de définir la taille du texte. */
+    font-size: 18px;
+}
+
+/* 
+    3. Selecteur d'ID
+    Pour cibler un élément avec un ID, on utilise le symbole point (#) suivi du nom de l'ID.
+*/
+#container{
+    background-color: coral;
+    /* Padding : Permet de définir l'espace entre le contenu et le bordure du conteneur. */
+    padding: 20px;
+}
+
+#content{
+    color: white;
+}
+
+/* 
+II - Les selecteurs combinés
+
+1. Les selecteurs descendants(espace)
+
+Ces sélecteurs ciblent tous les enfants d'un élément quelque soit leurs niveaux d'imbrication.
+*/
+
+.produit{
+    background-color: lightcoral;
+    padding: 20px;
+    /* width : Permet de définir la largeur de l'élément. */
+    width: 300px;
+}
+
+
+.produit h3{
+    color: slateblue;
+}
+
+
+/* 
+2. Selecteur d'enfant direct(>)
+
+Ce sélecteur cible tous les enfants directs d'un élément.
+*/
+
+section{
+    background-color:darkolivegreen;
+    padding: 20px;
+    width: 300px;
+}
+/* On cible que les span qui sont directement des enfants de la section */
+section>span{
+    font-weight: bold;
+    color: white;
+}
+
+/* 
+3. Selecteur de combinaison de classe
+Ce sélecteur cible tous les éléments qui ont simultanément les deux classes.
+*/
+
+.header{
+    color: yellowgreen;
+    font-size: 20px;
+}
+
+/* On cible que les éléments qui ont la classe header et la classe main-title simultanément */
+.header.main-title{
+    color: orange;
+    font-size: 30px;
+}
+
+/* 
+4. Le selecteur universel(*)
+
+Ce sélecteur cible tous les éléments du document.Il est utilisé principalement pour faire du reset du style du document car par défaut tous les éléments ont le style défini par le navigateur(user-agent-stylesheet).
+*/
+/* *{
+    background-color: violet;
+} */
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+#wrapper *{
+    background-color: #06324d;
+}
+
+.list{
+    color: whitesmoke;
+    font-weight: 700;
+    /* 
+        text-transform : Permet de changer la forme du texte(uppercase, lowercase, etc.)
+    */
+    text-transform: uppercase;
+}
+
+
+/* 
+5. Le selecteur de frère adjacent(+)
+Ce selecteur permet de sélectionner le premier élément qui suit directement un autre élément.
+*/
+/* On cible que le premier paragraphe qui suit directement le h3 */
+.detail h3+p{
+    color: firebrick;
+    font-weight: bold;
+}
+
+/* 6. Groupement de selecteurs
+Ce selecteur permet de sélectionner plusieurs éléments en même temps.
+*/
+
+h1,h2,h3{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 7. Sélecteurs d'attributs */
+
+input[type="text"]{
+    border: 3px solid green;
+}
+
+input[type="email"]{
+    border: 3px solid red;
+}

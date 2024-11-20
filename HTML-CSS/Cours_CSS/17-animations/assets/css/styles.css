@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    background-color: #FCFCEE;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 24px;
+    color: #FFF;
+    background-color: royalblue;
+}
+
+/* TRANSFORM */
+
+
+.square-1 {
+    width: 120px;
+    height: 120px;
+    background-color: lightcoral;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    padding: 2px;
+
+    /* transform: translate(100px,50px); */
+    /* Permet de déplacer un élément sur le plan(x,y,z) */
+    /* transform: rotate(5deg); */
+    /* Permet de tourner un élément sur le plan(x,y,z) */
+
+    /*transform: scale(1.1);  Permet de redimensionner un élément sur le plan(x,y,z) */
+
+    /*transform: skew(10deg);   Permet de faire une distorsion sur le plan(x,y,z) */
+    transform: translateX(100px) rotate(25deg) scale(1.1) skew(5deg);
+}
+
+/* TRANSITION 
+
+Transition permet de faire des effets de transition entre deux états d'un élément.
+*/
+
+.square-2 {
+    width: 120px;
+    height: 120px;
+    background-color: chocolate;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    padding: 2px;
+    transition: background-color 1s ease-out;
+}
+
+.square-2:hover {
+    background-color: cornflowerblue;
+}
+
+/* ANIMATION */
+
+.square-3 {
+    width: 100px;
+    height: 100px;
+    background-color: palegreen;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    padding: 2px;
+    animation: spin 5s linear infinite alternate;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(100deg);
+    }
+}
+
+.loader{
+    margin: 30px auto;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    animation: loader 2s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* SLIDER */
+.slider-wrapper{
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.slider-container{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation: slider 20s linear infinite;
+}
+
+@keyframes slider{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-75%);
+    }
+}
+
+.slider-item{
+    width: 25%;
+    height: 100%;
+    flex-shrink: 0;
+}
+.item-1{
+    background: url('../images/img1.jpg') no-repeat center center;
+}
+.item-2 {
+    background: url('../images/img2.jpg') no-repeat center center;
+}
+.item-3 {
+    background: url('../images/img3.jpg') no-repeat center center;
+}
+
+.slider-wrapper:hover .slider-container{
+    animation-play-state: paused;
+}

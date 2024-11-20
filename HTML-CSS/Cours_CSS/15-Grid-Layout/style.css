@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    background-color: #022E5B;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+section {
+    padding: 2rem;
+    background-color: #f0f0f0;
+}
+
+.grid-item {
+    background-color: firebrick;
+    padding: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 1. Structure d'une grille*/
+
+.grid-1 {
+    display: grid;
+    /* Permet de définir la structure de la grille */
+
+    grid-template-columns: 200px 500px 300px;
+    /* Permet de définir le nombre de colonnes ainsi que leur taille pout la grille */
+
+    grid-template-rows: 100px 200px;
+    /* Permet de définir le nombre de lignes ainsi que leur taille pout la grille */
+
+    grid-gap: 10px;
+    /* Permet de définir l'espace entre les colonnes et les lignes */
+}
+
+/* 2. La fonction repeat() et l'unité fr
+
+repeat() : permety de répéter un motif de colonne ou de ligne un certain nombre de fois.
+Sa synthaxe est : 
+repeat(nombre de répétition, valeur à répéter)
+
+fr(fraction): Represeente une fraction de la taille de la colonne ou de la ligne.
+*/
+
+.grid-2 {
+    display: grid;
+    grid-gap: 10px;
+    /* grid-template-columns: repeat(4,100px); 4 colones de 100px */
+
+    grid-template-columns: 100px 3fr repeat(2, 1fr);
+    /* Une colonne de 100px puis une colonne de 3fr puis deux colonnes de 1fr */
+
+    height: 500px;
+
+    /* l'unité fr sur la propriété grid-template-rows ne marche que si une hauteur est spécifiée */
+    grid-template-rows: 1fr 2fr;
+}
+
+/* 3. La propriété grid-template 
+Cette propriété permet de définir en une seule ligne les colonnes et les lignes de la grille.
+
+sa syntaxe est la suivante :
+grid-template: <nombre de row> /  <nombre de colonnes>
+*/
+
+.grid-3 {
+    display: grid;
+    grid-gap: 5px;
+    /* 1fr 80px 2fr Puis 300px et 2fr */
+    grid-template: 1fr 80px 2fr / 300px 2fr;
+}
+
+/* 4. Gestions des items 
+
+
+grid-row-start: Ligne de départ de la grille.
+grid-row-end: Ligne de fin de la grille.
+grid-column-start: Colonne de départ de la grille.
+grid-column-end: Colonne de fin de la grille.
+
+grid-column: Définit la colonne de départ et de fin de la grille.
+grid-row: Définit la ligne de départ et de fin de la grille.
+*/
+
+.grid-4 {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+}
+
+.grid-4 .item1 {
+    background-color: chocolate;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-4 .item2 {
+    background-color: #3f7805;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    height: 10rem;
+}
+
+.grid-4 .item6 {
+    background-color: darksalmon;
+    grid-column: 1/4;
+    grid-row: 5/6;
+}
+
+/* 5. Le mot clé span 
+span : Permet de définir le nombre de colonnes ou de lignes que l'élément doit occuper.
+*/
+
+.grid-5 {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 2fr);
+}
+
+.grid-5 .item1 {
+    background-color: #022E5B;
+    grid-column: 1/ span 2;
+    /* Départ à la prémière colonne et fin à la deuxième colonne */
+    grid-row: 1/span 2;
+}
+
+.grid-5 .item4 {
+    background-color: chocolate;
+    grid-column: span 2;
+    /* Prendra 2 colonnes à partir de sa position actuelle */
+    grid-row: span 2;
+}
+
+/* 6. La propriété grid-template-area
+Permet de définir une grille en utilisant des noms de colonnes et de lignes.
+
+Chaque élément de la grille est associé à une zone avec la propriété grid-area.
+*/
+
+.grid-6 {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+}
+
+.grid-6 .item1 {
+    background-color: cadetblue;
+    grid-area: header;
+}
+
+.grid-6 .item2 {
+    background-color: coral;
+    grid-area: aside;
+}
+
+.grid-6 .item3 {
+    background-color: lightcoral;
+    grid-area: main;
+    height: 20rem;
+}
+
+.grid-6 .item4 {
+    background-color: orange;
+    grid-area: footer;
+    height: 5rem;
+}
+
+/* 7. Les propriétés justify-content et align-content
+Ces 2 propriétés permettent d'aligner la grille dans horizontalement et verticalement.dans son container.
+
+justify-content : Alignement horizontal.
+align-content : Alignement vertical.
+
+Ces propriétés peuvent prendre les valeurs suivantes :
+start,end,center,stretch,space-between,space-around
+*/
+
+.grid-7 {
+    background-color: coral;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 100px);
+    height: 500px;
+    width: 500px;
+    grid-template-rows: repeat(2, 100px);
+    justify-content: center;
+    align-content: center;
+}
+
+/* 8. Les propriétés justify-items et align-items 
+Ces 2 propriétés permettent d'aligner les éléments(les items) de la grille dans leur ligne ou dans leur colonne.
+
+justify-items : Alignement horizontal.
+align-items : Alignement vertical.
+
+Ces propriétés peuvent prendre les valeurs suivantes :
+start,end,center,stretch(valeur par défaut)
+*/
+
+.grid-8 {
+    background-color: lightblue;
+    display: grid;
+    grid-gap: 20px;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    justify-items: flex-end;
+    align-items: center;
+}
+
+/* 9. La propriété justify-self et align-self
+Ces 2 propriétés permettent de contrôler l'alignement sur l'axe horizontal et vertical sur un élément spécifique.
+*/
+
+.grid-9 {
+    background-color: burlywood;
+    display: grid;
+    grid-gap: 5px;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    justify-items: flex-end;
+    align-items: center;
+}
+
+.grid-9 .item1 {
+    background-color: #022E5B;
+    justify-self: center;
+    align-self: center;
+}
+
+/* 10. La propriété place-content et place-items
+Ces 2 propriétés sont un raccourci de justify-content/ align-content et justify-items/align-items.
+*/
+
+.grid-10 {
+    background-color: lightslategray;
+    display: grid;
+    grid-gap: 5px;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    place-content: center center;
+    place-items: flex-start flex-end;
+}
+
+/* 11. minmax()
+minmax() : Permet de définir la taille minimale et maximale d'une colonne ou d'une ligne.
+
+sa syntaxe est la suivante :
+minmax(valeur minimale, valeur maximale)
+*/
+
+.grid-11 {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: minmax(200px, 1fr) minmax(300px , 2fr);
+    grid-template-rows: repeat(2, 100px);
+}
+
+/* Auto-fill & auto-fit 
+
+auto-fill : permet de créer une grille avec des grilles implicites jusqu'à ce qu'elles ne puissent plus être placées sur la ligne.
+
+auto-fit: Permet de créer une grille qui prendra toute la largeur disponible.
+*/
+
+.grid-12 {
+    background-color: orange;
+    display: grid;
+    max-width: 800px;
+    margin: 0 auto;
+    grid-gap: 5px;
+    grid-template-columns: repeat(Auto-fill,minmax(150px,1fr));
+}
+
+.grid-13 {
+    background-color: purple;
+    display: grid;
+    max-width: 800px;
+    margin: 0 auto;
+    grid-gap: 5px;
+    grid-template-columns: repeat(Auto-fit, minmax(150px, 1fr));
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoning 1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px repeat(2, 1fr);
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        .container > *{
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        header{
+            grid-column: 1/ -1;
+            padding: 10px;
+            background-color: #ffcccc;
+        }
+        aside{
+            background-color: #ccffcc;
+        }
+
+        main{
+            background-color: #ccccff;
+            grid-column: 2/ -1;
+        }
+
+        footer{
+            grid-column: 1/ -1;
+            padding: 10px;
+            background-color: #ffffcc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>En-tête</header>
+        <aside>Barre latérale</aside>
+        <main>Contenu principal</main>
+        <footer>Pied de page</footer>
+    </div>
+</body>
+
+</html>
