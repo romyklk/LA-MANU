@@ -1,0 +1,162 @@
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #f0f0f0;
+            --accent-color: #ff6b6b;
+            --font-color: #333;
+            --background-color: #f5f5f5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--font-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        #input-item {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            background-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        #input-item:focus {
+            outline: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #btn-add {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        #btn-add:hover {
+            background-color: #5048e5;
+        }
+
+        #btn-add i {
+            font-size: 1.3rem;
+        }
+
+        #shopping-list {
+            list-style-type: none;
+        }
+
+        #shopping-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #shopping-list li span {
+            flex: 1;
+            margin-right: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        #shopping-list li button {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        #shopping-list li button:hover {
+            background-color: #ff4d4d;
+        }
+
+        #shopping-list li button i {
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+            }
+
+            #input-item,
+            #btn-add {
+                font-size: 1rem;
+            }
+
+            #shopping-list li {
+                padding: 1.2rem;
+            }
+
+            #shopping-list li span {
+                font-size: 1.1rem;
+            }
+
+            #shopping-list li button {
+                padding: 0.8rem 1.2rem;
+            }
+
+            #shopping-list li button i {
+                font-size: 1.1rem;
+            }
+        }
