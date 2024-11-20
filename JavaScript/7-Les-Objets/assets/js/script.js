@@ -109,7 +109,7 @@ console.log(uneDate);
 
 
 let newYear = uneDate.setFullYear(2022)
-console.log(new Date(newYear));
+console.log(new Date(newYear).getFullYear());
 
 console.log(uneDate.setMonth(1)); // change le mois
 

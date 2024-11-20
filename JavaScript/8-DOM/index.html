@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le DOM</title>
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+    <h1>Le DOM</h1>
+
+    <div id="monElement">
+        Contenu de ma div qui a un id
+    </div>
+
+    <p>Ceci est un paragraphe</p>
+    <p>Ceci est un autre paragraphe</p>
+
+    <div class="maClass">Ceci est une div avec une classe</div>
+    <div class="maClass">Ceci est une autre div avec une classe</div>
+
+    <section id="main-content">
+        <h2>Contenu principal</h2>
+        <p class="description">Ceci est un paragraphe</p>
+        <p class="description">Ceci est un autre paragraphe</p>
+    </section>
+
+    <div id="parent">
+        <h2>Parent Element</h2>
+        <p id="child1">Premier
+             enfant</p>
+        <p id="child2">Deuxième 
+            enfant</p>
+        <p id="child3">Troisième enfant</p>
+    </div>
+
+    <div id="wrapper">
+
+        <h2 id="wrapper-title">Exemple de manipulation du contenu HTML</h2>
+
+        <p id="paragraph1">Ceci est le 
+
+            <span id="highligth1">premier</span> 
+            
+            paragraphe</p>
+
+        <p style="display: none;">Ce paragraphe sera caché</p>
+
+        <hr>
+
+                <h2 id="wrapper-title">Exemple de manipulation du contenu HTML</h2>
+                
+                <p id="paragraph2">Ceci est le
+                
+                    <span id="highligth2">premier</span>
+                
+                    paragraphe
+                </p>
+                
+                <p style="display: none;">Ce paragraphe sera caché</p>
+    </div>
+
+    <div id="content">
+        <p>Ce paragraphe utilise <strong>innerHTML</strong> pour manipuler le DOM</p>
+    </div>
+
+    <input type="text" id="inputField" value="texte initial">
+
+</body>
+</html>
