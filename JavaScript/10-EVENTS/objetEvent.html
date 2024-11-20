@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./assets/js/objEvent.js" defer></script>
+
+    <style>
+        #outer-container {
+            width: 400px;
+            height: 400px;
+            background-color: coral;
+            cursor: pointer;
+        }
+
+        #inner-container {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            margin: 100px;
+            align-content: center;
+            justify-content: center;
+
+        }
+
+        #btn {
+            background-color: cornflowerblue;
+            color:white;
+            padding: 10px 20px;
+            width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>L'objet event</h1>
+
+    <div style="width: 100px; height: 100px; background-color: coral;" id="container">
+
+        <button id="btn">clic ici </button>
+    </div>
+
+    <form action="" id="main-form">
+        <input type="text" id="username" name="username" placeholder="Entrez votre nom">
+        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
+        <button type="submit">Valider</button>
+    </form>
+    <div id="message"></div>
+
+    <div id="outer-container">
+        Container externe
+        <div id="inner-container">
+            Container interne
+            <button id="btn">Valider</button>
+        </div>
+    </div>
+</body>
+
+</html>
