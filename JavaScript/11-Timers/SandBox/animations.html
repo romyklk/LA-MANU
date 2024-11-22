@@ -5,15 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .rectangle {
+            width: 200px;
+            height: 80px;
+            background-color: firebrick;
+            position: absolute;
+            left: 0;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Exercice 3: Animations</h1>
     <p>
         Créez une animation simple qui déplace un rectangle de couleur rouge sur l'écran. Le rectangle doit se déplacer
-        de 10 pixels à la seconde, puis de -10 pixels à la seconde suivante, jusqu'à ce que le rectangle soit toujours à la
+        de 10 pixels à la seconde, puis de -10 pixels à la seconde suivante, jusqu'à ce que le rectangle soit toujours à
+        la
         même position.
     </p>
+    <div class="rectangle"></div>
+
+    <script>
+        let rectangle = document.querySelector('.rectangle');
+
+            let position = 0;
+            let sens = 1;
+            function animate() {
+                position += sens * 10;
+
+                rectangle.style.left = `${position}px`
+
+                if (position >= window.innerWidth - 200 || position <= 0) {
+                    sens *= -1
+                }
+
+                requestAnimationFrame(animate)
+            }
+
+            requestAnimationFrame(animate);
+
+    </script>
 </body>
 
 </html>

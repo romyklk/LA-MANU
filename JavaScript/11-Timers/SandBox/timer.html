@@ -14,7 +14,19 @@
     </p>
 
     <script>
-        //Votre code ici
+        let compte = 10
+
+        const interval = setInterval(() => {
+            console.log(`${compte}`);
+
+            compte--;
+
+            if (compte == -1) {
+                clearInterval(interval)
+                console.log("terminé");
+
+            }
+        }, 1000)
     </script>
 </body>
 

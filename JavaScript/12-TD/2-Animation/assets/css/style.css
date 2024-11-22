@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.sec {
+    height: 85vh;
+    padding-top: 4rem;
+}
+
+footer {
+    height: 25vh;
+}
+
+#sec-2 {
+    background-color: #FFE7AA;
+}
+
+/* Navigation */
+#site-navigation {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+}
+
+#nav-wrapper {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    color: white;
+}
+
+#site-navigation li {
+    list-style-type: none;
+}
+
+#site-navigation li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: baseline;
+}
+
+#site-navigation ul {
+    display: flex;
+    align-items: baseline;
+}
+
+#site-navigation li {
+    margin: 1.5rem;
+    display: flex;
+    align-items: baseline;
+}
+
+#site-navigation ul:last-of-type {
+    margin-left: auto;
+}
+
+#nav-wrapper>ul.nav.nav-left>li:nth-child(1) {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: baseline;
+}
+
+#logo::before {
+    content: "\f16b";
+    font-family: "Font Awesome 5 Brands";
+    margin-right: 10px;
+    color: white;
+    color: #FFE7AA;
+}
+
+#logo.logo::before {
+    color: #0D2F81;
+}
+
+/* Fin navigation */
+
+/* Layout principal */
+section {
+    width: 60vw;
+    margin: auto;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+#offers {
+    display: flex;
+}
+
+#offers p {
+    padding: 10px;
+    text-align: justify;
+}
+
+/* Header */
+#intro>* {
+    width: 50%;
+}
+
+#intro p {
+    color: white;
+    line-height: 1.63rem;
+}
+
+#main-header {
+    color: #FFE7AA;
+    line-height: 4.5rem;
+}
+
+#main-header h3 {
+    font-size: 1.6rem;
+}
+
+#main-header h1 {
+    font-size: 3.8rem;
+    font-weight: 400;
+}
+
+/* main */
+#site-content h2 {
+    font-size: 2.5em;
+}
+
+#specs h2 {
+    width: 77%;
+    color: #FFE7AA;
+}
+
+#specs h3 {
+    font-size: 1.5rem;
+}
+
+#specs p {
+    margin: 1.2rem auto;
+}
+
+#specs>*:not(h2) {
+    color: white;
+    margin-top: 1.2rem;
+}
+
+#specs-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    line-height: 1.6rem;
+}
+
+#specs-main>div:first-of-type {
+    width: 40%;
+}
+
+#specs-main>div:last-of-type {
+    width: 60%;
+}
+
+#specs-main>div {
+    padding: 2em;
+}
+
+#site-footer {
+    color: white;
+    background-color: black;
+    padding: 2em;
+}
+
+#offers>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+#offers h3 {
+    font-size: 2.5em;
+    color: #0D2F81;
+}
+
+
+#sec-4>section>div:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+#sec-4>section>div:nth-child(2) h2 {
+    font-size: 2.3rem;
+}
+
+#sec-4>section>div:nth-child(2) a {
+    text-decoration: none;
+    display: inline-block;
+    min-width: 2em;
+    padding: 0.6rem 1.5rem;
+    background-color: blue;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* scroll class */
+
+.odd {
+    background-color: #0D2F81;
+    color: white;
+}
+
+.even {
+    background-color: #FFE7AA;
+    color: black;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Inscription</h1>
+
+        <form id="registration-form">
+
+            <div class="form-group">
+                <label for="first-name">Prénom</label>
+                <input type="text" id="first-name" name="first-name">
+                <div class="error" id="error-first-name"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Nom</label>
+                <input type="text" id="last-name" name="last-name">
+                <div class="error" id="error-last-name"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+                <div class="error" id="error-email"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Genre</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Homme"> Homme</label>
+                    <label><input type="radio" name="gender" value="Femme"> Femme</label>
+                    <label><input type="radio" name="gender" value="Autre"> Autre</label>
+                </div>
+                <div class="error" id="error-gender"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Pays</label>
+                <select id="country" name="country">
+                    <option value="">Sélectionnez votre pays</option>
+                    <option value="france">France</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">États-Unis</option>
+                    <option value="germany">Allemagne</option>
+                </select>
+                <div class="error" id="error-country"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message (facultatif)</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="accept-terms" name="accept-terms">
+                    J'accepte les <a href="#" target="_blank" class="cgv">conditions générales</a>
+                </label>
+                <div class="error" id="error-terms"></div>
+            </div>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <div class="confirmation" id="confirmation">
+            Merci pour votre inscription !
+        </div>
+    </div>
+</body>
+
+</html>
