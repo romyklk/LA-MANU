@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devinez le Nombre</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Devinez le Nombre</h1>
+        <p class="game-info">(Entre 1 et 10)</p>
+        <div class="number">?</div>
+        <div class="input-group">
+            <input type="number" class="guess" min="1" max="10" placeholder="Votre supposition">
+            <button class="check">Vérifier</button>
+        </div>
+        <p class="message">Commencez à deviner...</p>
+        <div class="score-container">
+            <p class="score">🎯 Score: <span>10</span></p>
+            <p class="highscore">🏆 Meilleur score: <span>0</span></p>
+        </div>
+        <button class="again">Rejouer</button>
+    </main>
+</body>
+
+</html>
