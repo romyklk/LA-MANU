@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Exercice 2: Téléchargement de fichier</h1>
+    <p>
+        Créez une fonction telechargerFichier qui prend un callback. Cette fonction simule un téléchargement de fichier en 3 secondes. Une fois terminé, elle appelle le callback pour afficher "Téléchargement terminé !".
+    </p>
+   
+
+
+    <script>
+        function telechargerFichier(callback) {
+                console.log("Téléchargement en cours...");
+                setTimeout(function () {
+                    callback();
+                }, 3000);
+            }
+            telechargerFichier(function () {
+                console.log("Téléchargement terminé !");
+            });
+    </script>
+</body>
+
+</html>

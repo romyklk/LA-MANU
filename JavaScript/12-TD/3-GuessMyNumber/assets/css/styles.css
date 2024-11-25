@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    :root {
+        --color-primary: #3498db;
+        --color-primary-dark: #2980b9;
+        --color-secondary: #e74c3c;
+        --color-background: #032743;
+        --color-text: #2c3e50;
+        --color-text-light: #7f8c8d;
+        --color-white: #ffffff;
+        --color-success: #2ecc71;
+        --font-family: 'Poppins', sans-serif;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
+    }
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-family);
+        background-color: var(--color-background);
+        color: var(--color-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 1rem;
+    }
+
+    .container {
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--color-primary);
+    }
+
+    .game-info {
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+        margin-bottom: 1.5rem;
+    }
+
+    .number {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: var(--color-white);
+        margin: 1.5rem 0;
+        background-color: var(--color-background);
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        display: inline-block;
+        transition: var(--transition);
+    }
+
+    .input-group {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+        flex-grow: 1;
+        border: 2px solid var(--color-primary);
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+
+    input:focus {
+        outline: none;
+        border-color: var(--color-primary-dark);
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    button:hover {
+        background-color: var(--color-primary-dark);
+        transform: translateY(-2px);
+    }
+
+    button:active {
+        transform: translateY(0);
+    }
+
+    .message {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-secondary);
+        min-height: 1.5em;
+    }
+
+    .score-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+    }
+
+    .score,
+    .highscore {
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+    }
+
+    .again {
+        margin-top: 1.5rem;
+        background-color: var(--color-secondary);
+    }
+
+    .again:hover {
+        background-color: #c0392b;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .success .number {
+        animation: pulse 0.5s ease-in-out;
+        background-color: var(--color-success);
+        color: var(--color-white);
+    }
