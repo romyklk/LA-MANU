@@ -33,18 +33,18 @@ function checkGuess() {
         if (score > highScore) {
             highScore = score;
             highScoreElement.textContent = highScore;
+        } 
+
+    } else {
+
+        if (score > 1) {
+            displayMessage(guess > secretNumber ? 'Trop haut ' : 'Trop bas ');
+            score--;
+            scoreElement.textContent = score;
         } else {
-
-            if (score > 1) {
-                displayMessage(guess > secretNumber ? 'Trop haut ' : 'Trop bas ');
-                score--;
-                scoreElement.textContent = score;
-            } else {
-                displayMessage('Vous avez perdu !');
-                scoreElement.textContent = 0;
-            }
+            displayMessage('Vous avez perdu !');
+            scoreElement.textContent = 0;
         }
-
     }
 }
 
